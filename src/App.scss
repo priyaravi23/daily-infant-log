@@ -1,0 +1,85 @@
+.app {
+  // display the grid
+  display: grid;
+  grid-gap: 1em;
+  min-height: 100vh;
+  color: #555;
+  grid-template-areas: "header" "main" "footer" "aside"; // define the grid template areas
+  grid-template-rows: 3em auto 3em; // set height of the rows (there are three rows)
+  @media screen and (min-width: 760px) {
+    grid-template-rows: 3em auto 3em; // set height of the rows (there are three rows)
+    grid-template-areas:
+            "header header header header" // areas to be used for the first row
+            "aside main main main" // areas to be used for the second row
+            "footer footer footer footer" // areas to be used for the third row
+  }
+  @media screen and (max-width: 760px) {
+    grid-template-rows: 3em 3em auto 3em; // set height of the rows (there are three rows)
+    grid-template-areas:
+            "header"
+            "aside"
+            "main"
+            "footer"
+  }
+  &--header {
+    grid-area: header; // define mapping to the grid-are header which is referenced in grid-template-areas
+    font-size: 1.2em;
+    padding: 0 1rem;
+    background-color: #eee;
+    height: 2.4em;
+    display: flex;
+    align-items: center;
+  }
+  &--footer {
+    grid-area: footer;
+    height: 3em;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &--aside {
+    grid-area: aside;
+    padding: 1em;
+    background-color: #eee;
+    > ul {
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: column;
+      padding: 0;
+      margin: 0;
+      li {
+        list-style-type: none;
+        display: flex;
+        margin-bottom: 0.5em;
+      }
+    }
+    @media screen and (max-width: 760px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        > ul {
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+          align-items: center;
+          justify-content: space-around;
+          li {
+            list-style-type: none;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+  &--main {
+    grid-area: main;
+    padding: 1em;
+    background-color: #eee;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

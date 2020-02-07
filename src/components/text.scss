@@ -1,0 +1,33 @@
+.app--input {
+  display: flex;
+  flex-direction: column-reverse;
+  .app--input-label {
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 0.8em;
+    margin: 0.25em 0.15em;
+    transition: all 250ms ease;
+  }
+  input {
+    max-width: 20em;
+    font-size: 1em;
+    outline: none; // e.g. removes the blue outline on focus on chrome
+    padding: 0.35em 0.5em;
+    border: 1px solid #aaa;
+    transition: all 250ms ease;
+    &:focus {
+      border-bottom: 1px solid #444;
+    }
+    &:invalid {
+      border-bottom: 1px solid #ff0c05;
+    }
+  }
+
+  input:focus + .app--input-label {
+    color: black;
+    font-weight: bolder;
+  }
+  input:invalid + .app--input-label {
+    color: red;
+  }
+}

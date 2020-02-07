@@ -1,3 +1,19 @@
+## Daily Infant Log Tracker
+
+## Instructions
+
+- `mkdir prototypes`
+- `cd prototypes`
+- `yarn init -y`
+- `yarn add create-react-app`
+- `npx create-react-app dailyinfantlog`
+- `cd dailyinfantlog`
+- `yarn start`
+- `yarn add @blueprintjs/core`
+- `yarn add @blueprintjs/icons`
+- `yarn add react-router-dom`
+- `yarn add node-sass`
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
