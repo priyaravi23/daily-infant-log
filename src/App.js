@@ -1,5 +1,6 @@
 import React from 'react';
 import {BrowserRouter as Router, Link, Switch} from 'react-router-dom';
+import ParentLogForm from "./components/parent-log-form";
 import './App.scss';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
                 </aside>
                 <main className={'app--main'}>
                     Main Content
+                    <ParentLogForm/>
                 </main>
                 <footer className={'app--footer'}>
                     Copyright, Terms of use, Privacy Policy etc

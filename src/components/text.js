@@ -12,6 +12,7 @@ export default function Text(props) {
         pattern,
         required,
         className,
+        propName,
         handleChange = EMPTY_FUNC,
         handleBlur = EMPTY_FUNC,
         handleKeyDown = EMPTY_FUNC
@@ -25,6 +26,7 @@ export default function Text(props) {
             onChange={handleChange}
             onKeyDown={handleKeyDown}
             onBlur={handleBlur}
+            data-prop-name={propName}
             className={`app--input-text ${className}`}/>
         <div className={'app--input-label'}>
             <label>{label}</label>
